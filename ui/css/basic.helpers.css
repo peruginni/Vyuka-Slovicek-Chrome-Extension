@@ -1,0 +1,25 @@
+/* ============================================================================
+ == HELPERS =====
+ =========================================================================== */
+
+/* clearfix pattern */
+.clf:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .clf { height: 1%; }
+*:first-child+html .clf { height: 1%; }
+.clf { display: block; }
+
+/* image replacer pattern */
+.imr { position: relative; display: block; overflow: hidden; text-decoration: none; }
+.imr span { width: 100%; height: 100%; display: block; position: absolute; left: 0; top: 0; }
+
+/* image replacer pattern - guided */
+.imrg { position: relative; display: block; overflow: hidden; text-decoration: none; }
+.imrg .replacer { width: 100%; height: 100%; display: block; position: absolute; left: 0; top: 0; }
+
+/* universal hider */
+.hidden { display: none; }
+
+/* html entities - pick - http://typomil.com/typografie-na-webu/znakove-entity.htm */
+/* html entities - utf8 - http://www.fileformat.info/info/unicode/block/miscellaneous_symbols/images.htm */
+/* ie png transparency filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=''); */
+/* fontoteka - http://www.dgx.cz/tools/fonts/ */

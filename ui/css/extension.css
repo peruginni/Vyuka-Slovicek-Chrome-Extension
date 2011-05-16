@@ -1,0 +1,101 @@
+/**
+ * Extension stylesheet
+ *
+ * @author      Ondřej Macoszek <ondra.macoszek@gmail.com>
+ * @copyright   (c) 2010 Ondřej Macoszek
+ */
+
+/* Load basic components */
+@import url('basic.reset.css');
+@import url('basic.helpers.css');
+
+/* ============================================================================
+ == Layout ==
+ =========================================================================== */
+
+/* - links */
+a { color: #0066CC; /*0056B7*/ }
+a:hover { text-decoration: none; }
+
+/* - webkit-specific reset */
+input, button { outline: none; }
+
+/* - main wrapper */
+#extension { font-size: 14px; font-family: Arial, sans-serif; }
+
+#page { padding: 10px; }
+
+/* - panels */
+.panel.exercise, .panel.manage { display: none; }
+
+.panel { width: 220px; overflow: hidden; }
+    .panel h2 { font-size: 23px; font-weight: bold; color: #333333; padding: 0 30px 5px 0; text-align: right; }
+    .panel .head { position: relative; -webkit-user-select: none; }
+    .panel .head a.actionDashboard { position: absolute; top: 5px; left: 10px; }
+    .panel .head h2 { padding-right: 37px; }
+    .panel .body { position: relative; border: 3px solid #E6E6E6; -webkit-border-radius: 10px; -webkit-user-select: none; padding: 10px 10px 10px 10px; margin-bottom: 10px; }
+    .panel .body .corn { position: absolute; width: 19px; height: 17px; position: absolute; top: -17px; right: 10px; background: url('../img/bubble.corn.silver.png') no-repeat top left; }
+    .panel .foot { margin-bottom: 10px; padding: 0 10px; -webkit-user-select: none; }
+    .panel .foot .button { float: right; height: 20px; line-height: 20px; }
+    .panel .button { display: block; font-size: 18px; font-weight: bold; color: white; text-align: center; height: 20px; line-height: 20px; padding: 10px 20px; border: none; -webkit-border-radius: 7px; cursor: pointer; -webkit-user-select: none; }
+        .panel .button em { font-size: 30px; font-weight: bold; letter-spacing: -2px; padding-right: 7px; line-height: 13px; position: relative; top: 3px; left: 2px; }
+        .panel .button.green { background-color: #29C45E; }
+        .panel .button.green:hover { background-color: #54D07E; }
+        .panel .button.gray { background-color: #B8B8B8; }
+        .panel .button.gray:hover { background-color: #C2C2C2; }
+    .panel .messages { margin-bottom: 10px; }
+
+.panel.dashboard { width: 440px; }
+.panel.dashboard .statistics { -webkit-border-radius: 7px; background-color: #48B4E2; position: relative; padding: 10px 0; margin-bottom: 10px;  }
+    .panel.dashboard .statistics .corn { background: url('../img/bubble.corn.blue.png') no-repeat top left; width: 16px; height: 13px; position: absolute; top: -13px; right: -20px; }
+    .panel.dashboard .statistics li { color: white; font-size: 19px; padding: 0px 15px; }
+    .panel.dashboard .statistics em { font-size: 35px; font-weight: bold; letter-spacing: -2px; padding-right: 7px; }
+    .panel.dashboard .statistics span { position: relative; top: -5px; }
+.panel.dashboard .navigation { }
+    .panel.dashboard .navigation li { display: block; height: 30px; line-height: 30px; margin-bottom: 10px; }
+    .panel.dashboard .navigation li:last-child { margin-bottom: 0px; }
+    
+.panel.exercise { width: 440px; -webkit-user-select: none; }
+    .panel.exercise .translation { margin-bottom: 10px; padding: 0px 0px 0px 55px; position: relative;  }
+    .panel.exercise .translation.foreign { background: url('../img/quiz.translation.foreign.png') no-repeat 3px 5px; }
+    .panel.exercise .translation.native { background: url('../img/quiz.translation.native.png') no-repeat 1px 4px; }
+    .panel.exercise .translation:last-child { margin-bottom: 0; }
+        .panel.exercise .translation .corn {  position: absolute; width: 10px; height: 12px; position: absolute; top: 18px; left: 46px; background: url('../img/quiz.translation.corn.png') no-repeat top left; }
+        .panel.exercise .translation .word { padding: 10px 10px; min-height: 27px; background-color: #B6E1F3; color: #245A71; -webkit-border-radius: 5px; font-size: 22px; font-weight: bold; -webkit-user-select: text; }
+    .panel.exercise .isProblematic { float: left; padding: 7px 0 10px 5px; color: #666; -webkit-user-select: none; cursor: pointer; }
+    .panel.exercise .isProblematic input { margin-right: 3px; position: relative; top: 1px; }
+    .panel.exercise .remains { float: left; padding: 9px 0 10px 60px; color: #666; -webkit-user-select: none; font-size: 14px; }
+
+.panel.manage { width: 440px; }
+    .panel.manage .add { margin: 0; padding: 0; }
+        .panel.manage .add label { display: block; }
+            .panel.manage .add label span { display: none; }
+            .panel.manage .add label input { width: 100%; display: block; height: 20px; line-height: 20px; padding: 10px 8px; background-color: #D7EDD1; color: #297025; border: none; -webkit-border-radius: 5px; font-size: 22px; font-weight: bold; -webkit-user-select: text; }
+        .panel.manage .add .foreign { width: 397px; }
+        .panel.manage .add .native { width: 287px; float: left; margin-top: 10px; }
+        .panel.manage .add .button { float: right; height: 40px; line-height: 20px; margin-top: 10px; }
+    
+    .panel.manage .wordList { height: 200px; overflow: auto; }
+    .panel.manage .wordList li { font-size: 16px; color: #333; padding: 5px 5px; position: relative; }
+    .panel.manage .wordList li:nth-child(odd) { background-color: #ececec !important; }
+    .panel.manage .wordList li:hover {  }
+    .panel.manage .wordList li .separator { margin: 0 5px; }
+    .panel.manage .wordList li:hover .controls { display: block; }
+    .panel.manage .wordList li.problematic { background: url('../img/icon-problematic.word.png') no-repeat 4px 50%; padding-left: 28px; }
+    .panel.manage .wordList .controls { position: absolute; top: 3px; right: 3px; display: none; }
+        .panel.manage .wordList .controls li { float: left; margin-left: 5px; display: block; width: 13px; height: 13px; overflow: hidden; text-indent: -2000px; background-position: top left; background-repeat: no-repeat; cursor: pointer; }
+        .panel.manage .wordList .controls li:hover { background-position: left bottom; }
+        .panel.manage .wordList .controls li.edit { background-image: url('../img/icon-edit.png'); }
+        .panel.manage .wordList .controls li.remove { background-image: url('../img/icon-remove.png'); }
+    .panel.manage .wordList .edit input { width: 152px; }
+    .panel.manage .wordList .edit input[type=submit] { width: auto; }
+
+/* - messages */
+.messages { -webkit-user-select: none; }
+.messages .error, .messages .notice { width: auto; color: #444; padding: 10px; margin: 3px 0; -webkit-border-radius: 3px; }
+.messages .error { background-color: #FCDFDC; border: 1px solid #E0AEA9; }
+.messages .notice { background-color: #E4FCDC; border: 1px solid #B1E0A9; }
+
+
+
+	

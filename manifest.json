@@ -1,0 +1,19 @@
+{
+    "name": "Výuka slovíček",
+    "version": "1.0.1",
+
+    "description": "Procvičujte slovní zásobu přímo v prohlížeči",
+    "icons": {
+        "19": "ui/img/icon-19.png",
+        "32": "ui/img/icon-32.png",
+        "48": "ui/img/icon-48.png",
+        "128": "ui/img/icon-128.png"
+    },
+
+    "background_page": "ui/background.html",
+    "browser_action": {
+        "default_icon": "ui/img/icon-19.png",
+        "default_title": "Výuka slovíček",
+        "popup": "ui/popup.html"
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Výuka slovíček</title>
+        <meta name="author" content="Ondřej Macoszek, ondra.macoszek@gmail.com">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="css/extension.css">
+        <script type="text/javascript" src="../lib/jquery.js"></script>
+        <script type="text/javascript" src="core.js"></script>
+        <script type="text/javascript" src="PanelController.js"></script>
+        <script type="text/javascript" src="MessageController.js"></script>
+        <script type="text/javascript" src="DashboardController.js"></script>
+        <script type="text/javascript" src="ExerciseController.js"></script>
+        <script type="text/javascript" src="ManageController.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                var panelController = new PanelController();
+                var wordDAO = new WordDAO();
+
+                var dashboardController = new DashboardController(panelController, wordDAO);
+                var exerciseController = new ExerciseController(panelController, wordDAO);
+                var manageController = new ManageController(panelController, wordDAO);
+
+                panelController.loadStoredState();
+
+            });
+
+        </script>
+    </head>
+    <body id="extension">
+
+        <div id="page">
+
+            <div class="panel dashboard">
+                <div class="head">
+                    <h2>VÝUKA SLOVÍČEK</h2>
+                </div> <!-- /.head -->
+                <div class="body">
+                    <div class="corn"></div>
+                    <ul class="navigation">
+                        <li class="actionExerciseAll button green"></li>
+                        <li class="actionExerciseProblematic button green"></li>
+                        <li class="actionManage button gray">Přidat / Upravit</li>
+                    </ul> <!-- /.navigation -->
+                </div> <!-- /.panel.dashboard -->
+            </div> <!-- /.panel.dashboard -->
+
+            <div class="panel exercise">
+                <div class="head">
+                    <a href="#dashboard" class="actionDashboard">&larr; zpět</a>
+                    <h2>PROCVIČOVÁNÍ</h2>
+                </div> <!-- /.head -->
+                <div class="body">
+                    <div class="corn"></div>
+                    <div class="translation foreign">
+                        <div class="corn"></div>
+                        <div class="word"></div>
+                    </div>
+                    <div class="translation native">
+                        <div class="corn"></div>
+                        <div class="word"></div>
+                    </div>
+                    <input type="hidden" class="id">
+                </div> <!-- /.body -->
+                <div class="foot clf">
+                    <label class="isProblematic actionExerciseIsProblematic">
+                        <input type="checkbox">
+                        problémové slovo
+                    </label>
+                    <span class="remains"></span>
+                    <a href="#" class="button green actionExerciseSubmitQuiz">Odpověď</a>
+                </div> <!-- /.foot -->
+            </div> <!-- /.panel.exercise -->
+
+            <div class="panel manage">
+                <div class="head">
+                    <a href="#dashboard" class="actionDashboard">&larr; zpět</a>
+                    <h2>NOVÉ SLOVO</h2>
+                </div> <!-- /.head -->
+                <div class="body">
+                    <div class="corn"></div>
+                    <form class="add clf">
+                        <label class="translation foreign">
+                            <span>slovo v cizím jazyce</span>
+                            <input type="text" name="foreign">
+                        </label>
+                        <label class="translation native">
+                            <span>překlad</span>
+                            <input type="text" name="native">
+                        </label>
+                        <button type="submit" class="actionManageAdd button green">Přidat</button>
+                    </form> <!-- /.addNew -->
+                </div> <!-- /.body -->
+
+                <div class="head">
+                    <a href="#dashboard" class="actionDashboard">&larr; zpět</a>
+                    <h2>UPRAVIT</h2>
+                </div> <!-- /.head -->
+                <div class="body">
+                    <div class="corn"></div>
+                    <ul class="wordList clf">
+                        <li>
+                            empty
+                        </li>
+                    </ul> <!-- /.wordList -->
+                </div> <!-- /.body -->
+                <div class="foot clf">
+                    <a href="#" class="actionManageRemoveAllButProblematic">vymazat všechna kromě problémových</a>
+                </div> <!-- /.foot -->
+            </div> <!-- /.panel.manage -->
+
+            <div class="messages"></div>
+
+        </div> <!-- /#wordsPopup -->
+    </body>
+</html>

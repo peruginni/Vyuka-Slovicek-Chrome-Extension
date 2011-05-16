@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Výuka slovíček</title>
+        <link rel="stylesheet" type="text/css" href="css/extension.css">
+        <script type="text/javascript" src="json.js"></script>
+        <script type="text/javascript">
+
+            var storage = {
+                "setItem" : function(key, value) {
+                    try {
+                        localStorage.removeItem(key);
+                        localStorage.setItem(key, JSON.stringify(value));
+                    } catch(ex) {
+                        console.log(ex);
+                    }
+                },
+                "getItem" : function(key) {
+                    try {
+                        var value = JSON.parse(localStorage.getItem(key));
+                        return value;
+                    } catch(ex) {
+                        console.log(ex);
+                    }
+                    
+                },
+                "clearAll" : function() {
+                    try {
+                        localStorage.clear();
+                    } catch(ex) {
+                        console.log(ex);
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body></body>
+</html>
