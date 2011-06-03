@@ -3,14 +3,7 @@ Výuka slovíček (rozšíření pro Chrome)
 
 ## Vize
 
-**Okamžitě dostupné procvičování slovíček přímo v prohlížeči.**
-
-![Dashboard](https://github.com/peruginni/Vyuka-Slovicek-Chrome-Extension/raw/master/docs/screenshot-dashboard.png)
-![Exercise](https://github.com/peruginni/Vyuka-Slovicek-Chrome-Extension/raw/master/docs/screenshot-exercise.png)
-![Edit](https://github.com/peruginni/Vyuka-Slovicek-Chrome-Extension/raw/master/docs/screenshot-edit.png)
-
-
-### Podrobnější popis 
+**Rychlé procvičování slovíček přímo v prohlížeči.**
 
 Rozšíření umožňuje jednoduché procvičování slovní zásoby v prohlížeči. 
 
@@ -19,6 +12,14 @@ Během procvičování lze označit problémová slova a ty pak procvičovat sam
 Uživatel může přidávat nová slova a upravovat či mazat stávající. 
 
 Rozšíření si pamatuje stav, takže je možné se kdykoli vrátit k naposledy procvičovaným slovíčkům.
+
+## Ukázka
+
+* [Ke stažení v Chrome Web Store](https://chrome.google.com/webstore/detail/ofecbcnfbojpbigaklfbcpanpldbcpnl)
+
+![Dashboard](https://github.com/peruginni/Vyuka-Slovicek-Chrome-Extension/raw/master/docs/screenshot-dashboard.png)
+![Exercise](https://github.com/peruginni/Vyuka-Slovicek-Chrome-Extension/raw/master/docs/screenshot-exercise.png)
+![Edit](https://github.com/peruginni/Vyuka-Slovicek-Chrome-Extension/raw/master/docs/screenshot-edit.png)
 
 ## Návrh a implementace
 
